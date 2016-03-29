@@ -1,0 +1,51 @@
+#links {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box, .bracket {
+	display: inline-block;
+}
+
+.box img {
+	object-fit: contain;
+}
+
+.bracket {
+	object-fit: none;
+	width: 120px;
+	font-size: 11em;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#header {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#cmd span {
+	font-size: 35px;
+	position: relative;
+	display: inline-block;
+}
+
+#cmd span:nth-child(2) {
+	font-size: 30px;
+	top: 4px;
+  -webkit-animation-direction: normal;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: blink;
+  -webkit-animation-timing-function: ease;   
+}
+
+@-webkit-keyframes 'blink' {
+    0% { opacity:0 }
+    25% { opacity:1 }
+    50% { opacity: 1 }
+    75% { opacity: 1 }
+    100% { opacity: 0 }
+}
