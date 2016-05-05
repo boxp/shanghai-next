@@ -1,5 +1,5 @@
 (ns shanghai.routes
-  (:require [shanghai.view.index :as index-view]
+  (:require [shanghai.component.app :as comp-app]
             [goog.events :as events]
             [goog.history.EventType :as EventType]
             [om.core :as om]
@@ -16,6 +16,9 @@
   [el component]
   (om/root component {}
     {:target el}))
+
+(defroute index "/" []
+  (set-component application comp-app/app))
 
 ;; Quick and dirty history configuration.
 (let [h (History.)]
