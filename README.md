@@ -1,5 +1,7 @@
 # shanghai
 
+[![CircleCI](https://circleci.com/gh/boxp/shanghai-next/tree/master.svg?style=svg)](https://circleci.com/gh/boxp/shanghai-next/tree/master)
+
 FIXME: Write a one-line description of your library/project.
 
 ## Overview
@@ -30,7 +32,7 @@ To create a production build run:
     lein do clean, cljsbuild once min
 
 And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
+get live reloading, nor a REPL.
 
 ## License
 
