@@ -4,6 +4,7 @@
       CLUSTER_NAME: alice
       CLOUDSDK_COMPUTE_ZONE: asia-northeast1-a
       DEBIAN_FRONTEND: noninteractive
+      GOOGLE_APPLICATION_CREDENTIALS: ${HOME}/account-auth.json
     services:
       - docker
 
