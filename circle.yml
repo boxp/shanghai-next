@@ -18,6 +18,7 @@
       # Reading the zone from the env var is not working so we set it here
       - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
       - sudo /opt/google-cloud-sdk/bin/gcloud --quiet container clusters get-credentials $CLUSTER_NAME
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set container/use_client_certificate True
       - docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app clojure lein cljsbuild once min
       - docker build -t asia.gcr.io/${PROJECT_NAME}/shanghai:$CIRCLE_SHA1 .
       # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
