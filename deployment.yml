@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: shanghai-deployment
+  name: shanghai
 spec:
   replicas: 4
   template:
@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: shanghai
-        image: asia.gcr.io/boxp-kt/shanghai:latest
+        image: asia.gcr.io/boxp-tk/shanghai:latest
         ports:
         - containerPort: 80
