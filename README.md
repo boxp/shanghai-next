@@ -1,75 +1,39 @@
-# Welcome to Revel
+# shanghai
 
-## Getting Started
+FIXME: Write a one-line description of your library/project.
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+## Overview
 
-### Start the web server:
+FIXME: Write a paragraph about the library/project and highlight its goals.
 
-    revel run myapp
+## Setup
 
-   Run with <tt>--help</tt> for options.
+To get an interactive development environment run:
 
-### Go to http://localhost:9000/ and you'll see:
+    lein figwheel
 
-"It works"
+and open your browser at [localhost:3449](http://localhost:3449/).
+This will auto compile and send all changes to the browser without the
+need to reload. After the compilation process is complete, you will
+get a Browser Connected REPL. An easy way to try it is:
 
-### Description of Contents
+    (js/alert "Am I connected?")
 
-The default directory structure of a generated Revel application:
+and you should see an alert in the browser window.
 
-    myapp               App root
-      app               App sources
-        controllers     App controllers
-          init.go       Interceptor registration
-        models          App domain models
-        routes          Reverse routes (generated code)
-        views           Templates
-      tests             Test suites
-      conf              Configuration files
-        app.conf        Main configuration file
-        routes          Routes definition
-      messages          Message files
-      public            Public assets
-        css             CSS files
-        js              Javascript files
-        images          Image files
+To clean all compiled files:
 
-app
+    lein clean
 
-    The app directory contains the source code and templates for your application.
+To create a production build run:
 
-conf
+    lein do clean, cljsbuild once min
 
-    The conf directory contains the application’s configuration files. There are two main configuration files:
+And open your browser in `resources/public/index.html`. You will not
+get live reloading, nor a REPL. 
 
-    * app.conf, the main configuration file for the application, which contains standard configuration parameters
-    * routes, the routes definition file.
+## License
 
+Copyright © 2014 FIXME
 
-messages
-
-    The messages directory contains all localized message files.
-
-public
-
-    Resources stored in the public directory are static assets that are served directly by the Web server. Typically it is split into three standard sub-directories for images, CSS stylesheets and JavaScript files.
-
-    The names of these directories may be anything; the developer need only update the routes.
-
-test
-
-    Tests are kept in the tests directory. Revel provides a testing framework that makes it easy to write and run functional tests against your application.
-
-### Follow the guidelines to start developing your application:
-
-* The README file created within your application.
-* The [Getting Started with Revel](http://revel.github.io/tutorial/index.html).
-* The [Revel guides](http://revel.github.io/manual/index.html).
-* The [Revel sample apps](http://revel.github.io/samples/index.html).
-* The [API documentation](http://revel.github.io/docs/godoc/index.html).
-
-## Contributing
-We encourage you to contribute to Revel! Please check out the [Contributing to Revel
-guide](https://github.com/revel/revel/blob/master/CONTRIBUTING.md) for guidelines about how
-to proceed. [Join us](https://groups.google.com/forum/#!forum/revel-framework)!
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.

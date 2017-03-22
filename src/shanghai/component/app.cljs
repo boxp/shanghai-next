@@ -12,14 +12,14 @@
 
 (defrecord Link [url image command])
 
-(def links {:github (->Link "https://github.com/boxp" 
-                            "/public/img/github.png"
+(def links {:github (->Link "https://github.com/boxp"
+                            "/img/github.png"
                             "(car coll) => 'GitHubのアカウントです")
             :twitter (->Link "https://twitter.com/If_I_were_boxp"
-                             "/public/img/twitter.png"
+                             "/img/twitter.png"
                              "(cadr coll) => 'Twitterのアカウントです")
-            :niconico (->Link "http://www.nicovideo.jp/user/6265398" 
-                              "/public/img/niconico.png"
+            :niconico (->Link "http://www.nicovideo.jp/user/6265398"
+                              "/img/niconico.png"
                               "(caddr coll) => 'ニコニコ動画のアカウントです")})
 
 (defn- write-char
