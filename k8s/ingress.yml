@@ -10,9 +10,18 @@ spec:
   tls:
   - hosts:
     - boxp.tk
+    - www.boxp.tk
+    - atnd.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: shanghai
+          servicePort: 80
+  - host: www.boxp.tk
     http:
       paths:
       - path: /*
