@@ -11,7 +11,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: gcr.io/google_containers/nginx-ingress-controller:latest
+      - image: gcr.io/google_containers/nginx-ingress-controller:0.9.0-beta.3
         name: nginx
         imagePullPolicy: Always
         env:
@@ -36,4 +36,3 @@ spec:
         args:
         - /nginx-ingress-controller
         - --default-backend-service=nginx-ingress/default-http-backend
-        - --nginx-configmap=nginx-ingress/nginx
