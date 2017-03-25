@@ -28,3 +28,10 @@ spec:
         backend:
           serviceName: shanghai
           servicePort: 80
+  - host: atnd.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: shanghai
+          servicePort: 80
