@@ -12,7 +12,7 @@ spec:
     - boxp.tk
     secretName: shanghai-tls
   rules:
-  - hosts: boxp.tk
+  - host: boxp.tk
     http:
       paths:
       - path: /*
