@@ -19,21 +19,21 @@ spec:
   - host: boxp.tk
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: shanghai
           servicePort: 80
   - host: www.boxp.tk
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: shanghai
           servicePort: 80
   - host: atnd.boxp.tk
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: shanghai
           servicePort: 80
