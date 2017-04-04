@@ -14,6 +14,7 @@ spec:
     - boxp.tk
     - www.boxp.tk
     - atnd.boxp.tk
+    - blog.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
