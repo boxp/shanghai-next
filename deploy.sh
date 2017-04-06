@@ -19,6 +19,6 @@ kubectl apply -f k8s/lego/00-namespace.yml
 # kubectl apply -f k8s/nginx/deployment.yml
 kubectl apply -f generated-configmap.yml
 kubectl apply -f k8s/lego/deployment.yml
-kubectl apply -f generated-deployment.yml
+kubectl apply -f generated-deployment.yml --record
 kubectl apply -f generated-service.yml
 kubectl apply -f generated-ingress.yml
