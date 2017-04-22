@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: shanghai
 spec:
-  replicas: 2
+  replicas: 5
   template:
     metadata:
       labels:
