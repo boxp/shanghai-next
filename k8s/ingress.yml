@@ -15,6 +15,7 @@ spec:
     - www.boxp.tk
     - atnd.boxp.tk
     - blog.boxp.tk
+    - pubsub.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -48,4 +49,11 @@ spec:
       - path: /*
         backend:
           serviceName: shanghai
+          servicePort: 80
+  - host: pubsub.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: gcp-pubsub-adapter
           servicePort: 80
