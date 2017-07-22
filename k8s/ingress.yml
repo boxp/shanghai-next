@@ -14,6 +14,7 @@ spec:
     - boxp.tk
     - www.boxp.tk
     - atnd.boxp.tk
+    - alice.boxp.tk
     - blog.boxp.tk
     - pubsub.boxp.tk
     secretName: shanghai-tls
@@ -42,6 +43,13 @@ spec:
       - path: /*
         backend:
           serviceName: eure-atnd
+          servicePort: 80
+  - host: alice.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: puppet
           servicePort: 80
   - host: blog.boxp.tk
     http:
