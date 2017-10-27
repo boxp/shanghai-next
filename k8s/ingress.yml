@@ -16,6 +16,7 @@ spec:
     - atnd.boxp.tk
     - blog.boxp.tk
     - pubsub.boxp.tk
+    - shanghai.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -56,4 +57,11 @@ spec:
       - path: /*
         backend:
           serviceName: gcp-pubsub-adapter
+          servicePort: 80
+  - host: shanghai.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: antlion-clojure
           servicePort: 80
