@@ -26,6 +26,10 @@
       # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
       - docker tag asia.gcr.io/${PROJECT_NAME}/shanghai:$CIRCLE_SHA1 asia.gcr.io/${PROJECT_NAME}/shanghai:latest
 
+  test:
+    override:
+      - lein cljsbuild test
+
   deployment:
     prod:
       branch: master
