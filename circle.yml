@@ -26,12 +26,6 @@
       # Using a separate tag command until Docker 1.10 is available on CircleCI, then we can use two tags in the build command above
       - docker tag asia.gcr.io/${PROJECT_NAME}/shanghai:$CIRCLE_SHA1 asia.gcr.io/${PROJECT_NAME}/shanghai:latest
 
-  test:
-    override:
-      - docker run -d -p 3000:80 asia.gcr.io/${PROJECT_NAME}/shanghai:$CIRCLE_SHA1; sleep 10
-      - curl --retry 10 --retry-delay 5 -v http://localhost:3000
-      - curl --retry 10 --retry-delay 5 -v http://localhost:3000/js/compiled/shanghai.js
-
   deployment:
     prod:
       branch: master
