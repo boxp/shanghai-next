@@ -1,11 +1,15 @@
 {:steps [{:name "clojure"
           :args ["lein", "cljsbuild", "once", "min"]
-          :volumes [{:name "shanghai"
-                     :path "/workspace"}]}
+          :volumes [{:name "public"
+                     :path "/workspace/public"}
+                    {:name "misc"
+                     :path "/workspace/misc"}]}
          {:name "gcr.io/cloud-builders/docker"
           :args ["build", "-t", "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA", "."]
-          :volumes [{:name "shanghai"
-                     :path "/workspace"}]}]
+          :volumes [{:name "public"
+                     :path "/workspace/public"}
+                    {:name "misc"
+                     :path "/workspace/misc"}]}]
  :images {:shanghai "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA"}
  :k8s {:deployment "k8s/deployment.yml"
        :service "k8s/service.yml"}}
