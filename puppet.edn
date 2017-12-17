@@ -1,14 +1,11 @@
 {:steps [{:name "clojure"
           :args ["lein", "cljsbuild", "once", "min"]
-          :volumes [{:name "shanghai-cljs"
-                     :path "/usr/src/app"}]}
-         {:name "ubuntu"
-          :args ["cp", "/usr/src/app/public/js/compiled/shanghai.js", "./public/js/compiled/shanghai.js"]
           :volumes [{:name "shanghai"
-                     :path "/usr/src/app"}]}
+                     :path "/public"}]}
          {:name "gcr.io/cloud-builders/docker"
           :args ["build", "-t", "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA", "."]
-          }]
+          :volumes [{:name "shanghai"
+                     :path "/public"}]}]
  :images {:shanghai "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA"}
  :k8s {:deployment "k8s/deployment.yml"
        :service "k8s/service.yml"}}
