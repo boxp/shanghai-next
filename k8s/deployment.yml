@@ -24,3 +24,6 @@ spec:
         image: asia.gcr.io/boxp-tk/shanghai:${CIRCLE_SHA1}
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 10m
