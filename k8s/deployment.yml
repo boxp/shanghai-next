@@ -3,12 +3,22 @@ kind: Deployment
 metadata:
   name: shanghai
 spec:
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       labels:
         app: shanghai
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - shanghai
+            topologyKey: "kubernetes.io/hostname"
       containers:
       - name: shanghai
         image: asia.gcr.io/boxp-tk/shanghai:${CIRCLE_SHA1}
