@@ -42,7 +42,7 @@ spec:
       paths:
       - path: /*
         backend:
-          serviceName: eure-atnd
+          serviceName: shanghai
           servicePort: 80
   - host: blog.boxp.tk
     http:
