@@ -1,5 +1,9 @@
 {:steps [{:name "gcr.io/cloud-builders/docker"
-          :args ["build", "-t", "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA", "."]}]
+          :args ["build", "-t", "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA",
+                          "--cache-from", "asia.gcr.io/$PROJECT_ID/shanghai:latest"
+                          "."]}
+         {:name "gcr.io/cloud-builders/docker"
+          :args ["tag" "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA" "asia.gcr.io/$PROJECT_ID/shanghai:latest"]}]
  :images {:shanghai "asia.gcr.io/$PROJECT_ID/shanghai:$COMMIT_SHA"}
  :k8s {:deployment "k8s/deployment.yml"
        :service "k8s/service.yml"}}
