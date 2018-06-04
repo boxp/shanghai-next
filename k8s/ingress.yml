@@ -6,18 +6,17 @@ metadata:
   annotations:
     kubernetes.io/tls-acme: "true"
     kubernetes.io/ingress.class: "gce"
-    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/ingress.global-static-ip-name: "shanghai-ip"
 spec:
   tls:
   - hosts:
     - boxp.tk
     - www.boxp.tk
-    - atnd.boxp.tk
     - blog.boxp.tk
     - pubsub.boxp.tk
     - shanghai.boxp.tk
-    - sasara.boxp.tk
     - mstdn.boxp.tk
+    - sasara.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -32,13 +31,6 @@ spec:
           serviceName: gcp-pubsub-adapter
           servicePort: 80
   - host: www.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: shanghai
-          servicePort: 80
-  - host: atnd.boxp.tk
     http:
       paths:
       - path: /*
@@ -66,17 +58,17 @@ spec:
         backend:
           serviceName: antlion-clojure
           servicePort: 80
-  - host: sasara.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: sasara-server
-          servicePort: 80
   - host: mstdn.boxp.tk
     http:
       paths:
       - path: /*
         backend:
           serviceName: mstdn-nginx
+          servicePort: 80
+  - host: sasara.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: sasara-server
           servicePort: 80
