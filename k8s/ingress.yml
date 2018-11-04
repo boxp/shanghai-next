@@ -13,10 +13,10 @@ spec:
     - boxp.tk
     - www.boxp.tk
     - blog.boxp.tk
-    - pubsub.boxp.tk
-    - shanghai.boxp.tk
+    # - pubsub.boxp.tk
+    # - shanghai.boxp.tk
     - mstdn.boxp.tk
-    - sasara.boxp.tk
+    # - sasara.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -44,20 +44,20 @@ spec:
         backend:
           serviceName: shanghai
           servicePort: 80
-  - host: pubsub.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: gcp-pubsub-adapter
-          servicePort: 80
-  - host: shanghai.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: antlion-clojure
-          servicePort: 80
+  # - host: pubsub.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: gcp-pubsub-adapter
+  #         servicePort: 80
+  # - host: shanghai.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: antlion-clojure
+  #         servicePort: 80
   - host: mstdn.boxp.tk
     http:
       paths:
@@ -65,10 +65,10 @@ spec:
         backend:
           serviceName: mstdn-nginx
           servicePort: 80
-  - host: sasara.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: sasara-server
-          servicePort: 80
+  # - host: sasara.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: sasara-server
+  #         servicePort: 80
