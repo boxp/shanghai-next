@@ -1,4 +1,4 @@
-FROM clojure:lein-2.8.1-alpine AS frontend
+FROM clojure:lein-alpine AS frontend
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
