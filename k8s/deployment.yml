@@ -21,7 +21,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
       - name: shanghai
-        image: asia.gcr.io/${PROJECT_ID}/shanghai:${REVISION_ID}
+        image: gcr.io/${PROJECT_ID}/shanghai:${REVISION_ID}
         ports:
         - containerPort: 80
         resources:
