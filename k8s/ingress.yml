@@ -16,7 +16,7 @@ spec:
     # - pubsub.boxp.tk
     # - shanghai.boxp.tk
     - mstdn.boxp.tk
-    # - sasara.boxp.tk
+    - sasara.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -65,10 +65,10 @@ spec:
         backend:
           serviceName: mstdn-nginx
           servicePort: 80
-  # - host: sasara.boxp.tk
-  #   http:
-  #     paths:
-  #     - path: /*
-  #       backend:
-  #         serviceName: sasara-server
-  #         servicePort: 80
+  - host: sasara.boxp.tk
+    http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: sasara-server
+          servicePort: 80
