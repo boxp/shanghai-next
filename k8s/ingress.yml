@@ -27,10 +27,10 @@ spec:
         backend:
           serviceName: shanghai
           servicePort: 80
-      - path: /lemming/*
-        backend:
-          serviceName: gcp-pubsub-adapter
-          servicePort: 80
+      # - path: /lemming/*
+      #   backend:
+      #     serviceName: gcp-pubsub-adapter
+      #     servicePort: 80
   - host: www.boxp.tk
     http:
       paths:
