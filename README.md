@@ -1,7 +1,5 @@
 # shanghai
 
-[![CircleCI](https://circleci.com/gh/boxp/shanghai-next/tree/master.svg?style=svg)](https://circleci.com/gh/boxp/shanghai-next/tree/master)
-
 FIXME: Write a one-line description of your library/project.
 
 ## Overview
