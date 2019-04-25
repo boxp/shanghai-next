@@ -18,7 +18,7 @@ spec:
     - mstdn.boxp.tk
     - sasara.boxp.tk
     - vr-match.boxp.tk
-    - vr-slide.boxp.tk
+    - api-hito-hub.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -81,10 +81,10 @@ spec:
         backend:
           serviceName: vr-match
           servicePort: 80
-  - host: vr-slide.boxp.tk
+  - host: api-hito-hub.boxp.tk
     http:
       paths:
       - path: /*
         backend:
-          serviceName: vrc-slide-server
+          serviceName: vr-match-api
           servicePort: 80
