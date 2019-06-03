@@ -86,5 +86,5 @@ spec:
       paths:
       - path: /*
         backend:
-          serviceName: vr-match-api
+          serviceName: vr-match-back-end
           servicePort: 80
