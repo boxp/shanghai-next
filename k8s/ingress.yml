@@ -17,8 +17,8 @@ spec:
     # - shanghai.boxp.tk
     - mstdn.boxp.tk
     # - sasara.boxp.tk
-    - vr-match.boxp.tk
-    - api-hito-hub.boxp.tk
+    - hitohub-staging.boxp.tk
+    - api-hitohub-staging.boxp.tk
     secretName: shanghai-tls
   rules:
   - host: boxp.tk
@@ -74,14 +74,14 @@ spec:
   #       backend:
   #         serviceName: sasara-server
   #         servicePort: 80
-  - host: vr-match.boxp.tk
+  - host: hitohub-staging.boxp.tk
     http:
       paths:
       - path: /*
         backend:
           serviceName: vr-match-staging
           servicePort: 80
-  - host: api-hito-hub.boxp.tk
+  - host: api-hitohub-staging.boxp.tk
     http:
       paths:
       - path: /*
