@@ -16,7 +16,7 @@ spec:
     # - pubsub.boxp.tk
     # - shanghai.boxp.tk
     - mstdn.boxp.tk
-    - sasara.boxp.tk
+    # - sasara.boxp.tk
     - vr-match.boxp.tk
     - api-hito-hub.boxp.tk
     secretName: shanghai-tls
@@ -67,24 +67,24 @@ spec:
         backend:
           serviceName: mstdn-nginx
           servicePort: 80
-  - host: sasara.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: sasara-server
-          servicePort: 80
+  # - host: sasara.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: sasara-server
+  #         servicePort: 80
   - host: vr-match.boxp.tk
     http:
       paths:
       - path: /*
         backend:
-          serviceName: vr-match
+          serviceName: vr-match-staging
           servicePort: 80
   - host: api-hito-hub.boxp.tk
     http:
       paths:
       - path: /*
         backend:
-          serviceName: vr-match-back-end
+          serviceName: vr-match-back-end-staging
           servicePort: 80
