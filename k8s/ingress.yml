@@ -15,7 +15,7 @@ spec:
     - blog.boxp.tk
     # - pubsub.boxp.tk
     # - shanghai.boxp.tk
-    - mstdn.boxp.tk
+    # - mstdn.boxp.tk
     # - sasara.boxp.tk
     - hitohub-staging.boxp.tk
     - api-hitohub-staging.boxp.tk
@@ -60,13 +60,13 @@ spec:
   #       backend:
   #         serviceName: antlion-clojure
   #         servicePort: 80
-  - host: mstdn.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: mstdn-nginx
-          servicePort: 80
+  # - host: mstdn.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: mstdn-nginx
+  #         servicePort: 80
   # - host: sasara.boxp.tk
   #   http:
   #     paths:
