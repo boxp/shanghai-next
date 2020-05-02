@@ -8,7 +8,7 @@
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.8.40"]
-                 [cljsjs/react "0.14.3-0"]
+                 [cljsjs/react "16.13.1-0"]
                  [cljsjs/react-dom "0.14.3-1"]
                  [sablono "0.6.3"]
                  [prismatic/om-tools "0.3.12"]
