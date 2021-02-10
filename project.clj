@@ -11,7 +11,7 @@
                  [cljsjs/react "0.14.3-0"]
                  [cljsjs/react-dom "0.14.3-1"]
                  [sablono "0.6.3"]
-                 [prismatic/om-tools "0.3.12"]
+                 [prismatic/om-tools "0.5.0"]
                  [org.omcljs/om "0.9.0"]
                  [secretary "1.2.3"]
                  [org.clojure/core.async "0.2.374"
