@@ -31,9 +31,7 @@ steps:
   - |
     gcloud config set container/use_client_certificate True
     gcloud container clusters get-credentials alice --zone asia-northeast1-a
-    kubectl apply -f k8s/lego/00-namespace.yml
-    kubectl apply -f k8s/lego/deployment.yml
-    kubectl apply -f generated-configmap.yml
     kubectl apply -f generated-deployment.yml --record
     kubectl apply -f generated-service.yml
     kubectl apply -f generated-ingress.yml
+    kubectl apply -f generated-certificate.yml

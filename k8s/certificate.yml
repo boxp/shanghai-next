@@ -1,0 +1,11 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: shanghai-certificate
+spec:
+  domains:
+    - www.boxp.tk
+    - hitohub-staging.boxp.tk
+    - api-hitohub-staging.boxp.tk
+    - hitohub.boxp.tk
+    - api-hitohub.boxp.tk
