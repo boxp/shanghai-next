@@ -14,7 +14,7 @@
                  [prismatic/om-tools "0.3.12"]
                  [org.omcljs/om "0.9.0"]
                  [secretary "1.2.3"]
-                 [org.clojure/core.async "0.2.374"
+                 [org.clojure/core.async "1.6.681"
                   :exclusions [org.clojure/tools.reader]]]
 
   :plugins [[lein-figwheel "0.5.2"]
