@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 RUN lein cljsbuild once min
 
-FROM nginx:1.15.8-alpine
+FROM nginx:1.25.3-alpine
 
 COPY --from=frontend /usr/src/app/public /usr/share/nginx/html
 
