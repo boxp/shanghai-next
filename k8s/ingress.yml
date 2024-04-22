@@ -9,31 +9,31 @@ metadata:
     kubernetes.io/ingress.global-static-ip-name: "shanghai-ip"
 spec:
   rules:
-  - host: boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: shanghai
-          servicePort: 80
-      # - path: /lemming/*
-      #   backend:
-      #     serviceName: gcp-pubsub-adapter
-      #     servicePort: 80
-  - host: www.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: shanghai
-          servicePort: 80
-  - host: blog.boxp.tk
-    http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: shanghai
-          servicePort: 80
+  # - host: boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: shanghai
+  #         servicePort: 80
+  #     - path: /lemming/*
+  #       backend:
+  #         serviceName: gcp-pubsub-adapter
+  #         servicePort: 80
+  # - host: www.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: shanghai
+  #         servicePort: 80
+  # - host: blog.boxp.tk
+  #   http:
+  #     paths:
+  #     - path: /*
+  #       backend:
+  #         serviceName: shanghai
+  #         servicePort: 80
   # - host: pubsub.boxp.tk
   #   http:
   #     paths:
